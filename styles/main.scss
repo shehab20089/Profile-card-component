@@ -1,4 +1,4 @@
-@import url("https://fonts.google.com/specimen/Kumbh+Sans");
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 * {
   font-size: 18px;
   font-family: "Kumbh Sans", sans-serif;
@@ -7,10 +7,28 @@
 
   padding: 0px;
 }
-$primary-color: hsl(185, 75%, 39%);
-$primary-color: hsl(229, 23%, 23%);
-$primary-color: hsl(227, 10%, 46%);
-$primary-color: hsl(185, 75%, 39%);
+$bg-color: hsl(185, 75%, 39%);
+$text-color: hsl(229, 23%, 23%);
+$secondry-text-color: hsl(227, 10%, 46%);
 
-.page-container {
+body {
+  background: url(../images/bg-pattern-top.svg),
+    url(../images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat;
+  background-position: bottom 40vh right 48vw, top 50vh left 48vw;
+  background-color: $bg-color;
+}
+.wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
