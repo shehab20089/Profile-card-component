@@ -10,6 +10,7 @@
 $bg-color: hsl(185, 75%, 39%);
 $text-color: hsl(229, 23%, 23%);
 $secondry-text-color: hsl(227, 10%, 46%);
+$neutral: hsl(0, 0%, 59%);
 
 body {
   background: url(../images/bg-pattern-top.svg),
@@ -22,13 +23,79 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
+  background-repeat: no-repeat;
   align-items: center;
-}
+  .card {
+    position: relative;
+    flex-basis: 92%;
+    max-width: 330px;
+    overflow: hidden;
+    border-radius: 13px;
+    background-image: url(../images/bg-pattern-card.svg);
 
+    .card-avatar {
+      overflow: hidden;
+      width: auto;
+      top: 5rem;
+      padding: 0.2em;
+      margin: 0 50%;
+      transform: translate(-50%, 0);
+      position: absolute;
+      background: #ffff;
+      border-radius: 50%;
+      img {
+        text-align: center;
+        vertical-align: middle;
+        border-radius: 50%;
+      }
+    }
+
+    [class*="sub"] {
+      font-size: 0.8rem;
+      color: $neutral;
+      font-weight: 400;
+    }
+    [class*="--small"] {
+      font-size: 0.7rem;
+    }
+    .card-info {
+      margin-top: 8rem;
+      padding: 2em;
+      background-color: #ffff;
+      text-align: center;
+      color: $text-color;
+      h1 {
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+
+        span {
+          color: $neutral;
+          font-weight: 400;
+        }
+      }
+    }
+
+    .card-footer {
+      background-color: #ffff;
+      padding: 1.3em;
+      border-top: 1px solid hsla(0, 0%, 59%, 0.233);
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      .header {
+        font-weight: bold;
+        margin-bottom: 0.3rem;
+      }
+    }
+  }
+}
 .attribution {
   position: absolute;
-  bottom: 2rem;
+  bottom: 2vh;
   left: 0;
   right: 0;
   margin: 0 auto;
+  margin-top: 50px;
+  font-size: 0.5rem;
 }
